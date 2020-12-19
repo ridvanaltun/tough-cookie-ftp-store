@@ -1,6 +1,6 @@
 {
   "name": "tough-cookie-ftp-store",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "A JSON file store implementation for tough-cookie module.",
   "main": "lib/cookie-ftp-store.js",
   "scripts": {
