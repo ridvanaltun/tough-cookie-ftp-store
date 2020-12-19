@@ -1,0 +1,69 @@
+{
+  "name": "tough-cookie-ftp-store",
+  "version": "0.0.0-development",
+  "description": "A JSON file store implementation for tough-cookie module.",
+  "main": "lib/cookie-ftp-store.js",
+  "scripts": {
+    "commit": "git-cz",
+    "lint": "prettier-standard --lint",
+    "lint:check": "prettier-standard --lint --check",
+    "format": "prettier-standard --format",
+    "format:check": "prettier-standard --check",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ridvanaltun/tough-cookie-ftp-store.git"
+  },
+  "keywords": [
+    "tough",
+    "cookie",
+    "ftp",
+    "store"
+  ],
+  "author": {
+    "name": "Rıdvan Altun",
+    "email": "ridvanaltun@outlook.com",
+    "url": "https://ridvanaltun.github.io/"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ridvanaltun/tough-cookie-ftp-store/issues"
+  },
+  "homepage": "https://github.com/ridvanaltun/tough-cookie-ftp-store#readme",
+  "dependencies": {
+    "basic-ftp": "^4.6.3",
+    "object-assign-deep": "^0.4.0",
+    "tough-cookie": "^4.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "prettier-standard": "^16.4.1",
+    "semantic-release": "^17.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-standard --lint --staged",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
